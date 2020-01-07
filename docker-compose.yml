@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  proxysql:
+    build: .
+    container_name: proxysql
+    restart: always
+    volumes:
+      - ./etc/proxysql.cnf:/etc/proxysql.cnf:ro
+      - data-proxy:/var/lib/proxysql
+    ports:
+      # - "6032:6032"
+      - "6033:6033"
+
+volumes:
+  data-proxy:
