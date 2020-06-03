@@ -2,6 +2,7 @@ version: "3"
 
 services:
   proxysql:
+    image: proxysql
     build: .
     container_name: proxysql
     restart: always
